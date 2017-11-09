@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <base href="/">
+    <title>Sprint Bootstrap Website Design::::,</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<header></header>
+<main></main>
+<footer></footer>
+
+
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    //文档就绪事件
+    $(document).ready(function(){
+        test();
+    });
+    //发起ajax请求
+    function test(){
+        var para  ='';
+        $.ajax({
+            url:'http://127.0.0.1:3009/get-test-data',
+            type: 'GET',
+            async:true,
+            data:para,
+            success: function(res)
+            {
+                alert(res);
+            }
+        });
+    }
+</script>
+</body>
+</html>
